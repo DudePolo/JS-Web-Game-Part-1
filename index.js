@@ -49,19 +49,17 @@ function backgroundImage(asset, left, bottom) {
 }
 
 function createBackground(){
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    let grassHeight = height *.52;
-    let skyHeight = height *.48;
+    let grassHeight = window.innerHeight *.53;
+    let skyHeight = window.innerHeight *.47;
     
 
-    for(let i = 0; i < width; i+= 100){
+    for(let i = 0; i < window.innerWidth; i+= 100){
         for (let j = 0; j < grassHeight; j += 100){
             backgroundImage('assets/grass.png', i + 'px', j + 'px')
         }
     }
 
-    for(let i = 0; i < width; i += 100){
+    for(let i = 0; i < window.innerWidth; i += 100){
         for(let j = 0; j < skyHeight; j += 100){
             let k = grassHeight + j;
             backgroundImage('assets/sky.png', i + 'px', k + 'px');
